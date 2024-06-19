@@ -284,6 +284,30 @@ text-align: center;
     background-repeat: no-repeat;
 }
 
+.walrus {
+    background-image: url('images/walrus-format.jpg');
+    border-radius: 16px;
+}
+
+.horseshoe {
+    background-image: url('images/horseshoe-format.jpg');
+    border-radius: 16px;
+}
+
+.handlebar {
+    background-image: url('images/handlebar-format.jpg');
+    border-radius: 16px;
+}
+
+.formats-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: content-box; /* Добавляем этот стиль */
+    /* Дополнительные стили по желанию */
+}
+
+
 
 
 
@@ -371,16 +395,64 @@ border: 2px solid #cfcfbc;}*/
 .format-text {
     font-size: 14px;
     font-weight: 300;
+    color: var(--color-primary-light);
+    padding-top: -60px;
+        /* текст вниз */
 }
 
 .formats-title {
     margin-bottom: 80px;
 }
 
+.format-title {
+    color: var(--color-primary-light);
+     margin-top: 205px; 
+}
+
 /* Contact section */
 .contact-title {
     margin-bottom: 16px;
 }
+
+.container {
+    position: relative;
+}
+
+.button-container {
+    height: 100px;
+    margin-top: 0px;
+    position: absolute;
+    gap: 200px;
+    top: 60%;
+    transform: translateY(-80%);
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);    
+}
+
+.section {
+    display: flex;
+    align-items: center;
+}
+
+
+.left-button {
+    left: 0px; /* Здесь можно регулировать расстояние от левого края .button-container до левой кнопки */
+    margin-right: 10px; /* Здесь можно регулировать расстояние между левой кнопкой и карточками */
+}
+
+.right-button {
+    right: 0;
+    margin-left: 1250px; /* Здесь можно регулировать расстояние между правой кнопкой и карточками */
+}
+
+.formats-container {
+    flex-grow: 1; /* Растягиваем контейнер с карточками на всю доступную ширину */
+}
+
 
 /* Footer */
 .address-link {
@@ -401,6 +473,41 @@ border: 2px solid #cfcfbc;}*/
 .address-copyright {
     font-size: 14px;
 }
+
+
+
+.container_con {
+    display: flex;
+  }
+
+  .content-wrapper {
+    display: flex;
+    gap: 50px; /* добавление промежутка между текстовым контентом и картой */
+    flex: 1;
+  }
+  
+  .text-content {
+    flex: 1;
+    max-width: 1000px; /* регулируйте максимальную ширину текстового контента по вашему усмотрению */
+    
+  }
+  
+  .centered-text {
+    text-align: center; /* Центрирование текста по центру */
+    
+  }
+
+  
+  
+
+  
+  
+  .map {
+    width: 703;
+    height: 595;
+    border-radius: 7%;
+  }
+  
 
 /* Footer */
 
@@ -474,3 +581,4 @@ border: 2px solid #cfcfbc;}*/
 .address-copyright {
     margin-top: 10px; /* Add spacing between address links and copyright */
 }
+   

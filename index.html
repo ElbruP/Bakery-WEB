@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;0,900;1,400&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="form.css">
     <link rel="stylesheet" href="style.css" >
     <title>Сучасна пекарня</title>
 </head>
@@ -107,64 +107,110 @@
             </ul>
            </div>
         </section>
-        <section class="section" id="formatsSection">
-            <div class="container">
-                
-                    <h2 class="formats-title section-title">Формати</h2>
-                    <div class="formats-container"></div>
-                    <button class="carousel-button " type="button">
-                        <img width="30" height="30" src="images/reshot-button.svg" alt="Reshot Button"> 
-                    </button>
-                    <ul class="formats-list">
-                        <li class="formats-item">
-                            <article class="format"> 
-                                <h3 class="format-title">Walrus</h3>
-                                <div class="format-text">
-                                    <p>Площа: до 120 м2</p>
-                                    <p>Меню: розширене меню</p>
-                                    <p>Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2 офіціанти-різнороби</p>
-                                    <p>Посадкові місця: є</p>
-                                </div>
-                            </article>
-                        </li>
-                        <li class="formats-item">
-                            <article class="format"> 
-                                <h3 class="format-title">Horseshoe</h3>
-                                <div class="format-text">
-                                    <p>Площа: до 120 м2</p>
-                                    <p>Меню: розширене меню</p>
-                                    <p>Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2 офіціанти-різнороби</p>
-                                    <p>Посадкові місця: є</p>
-                                </div>
-                            </article>
-                        </li>
-                        <li class="formats-item">
-                            <article class="format"> 
-                                <h3 class="format-title">Handlebar</h3>
-                                <div class="format-text">
-                                    <p>Площа: до 120 м2</p>
-                                    <p>Меню: розширене меню</p>
-                                    <p>Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2 офіціанти-різнороби</p>
-                                    <p>Посадкові місця: є</p>
-                                </div>
-                            </article>
-                        </li>
-                    </ul>
-                    <button class="carousel-button" type="button">
-                        <img width="30" height="30" src="images/reshot-button.svg" alt="Reshot Button"> 
-                    </button>
+    <section class="section" id="formatsSection">
+        <div class="container">
+    
+            <div class="button-container">
+                <button class="carousel-button left-button" type="button">
+                    <img width="30" height="30" src="images/reshot-icon-left.svg" alt="Reshot Button">
+                </button>
+            </div>
+    
+            <h2 class="formats-title section-title">Формати</h2>
+            <div class="formats-container">
+                <ul class="formats-list">
+                    <li class="formats-item walrus">
+                        <article class="format">
+                            <h3 class="format-title">Walrus</h3>
+                            <div class="format-text">
+                                <p>Площа: до 120 м2</p>
+                                <p>Меню: розширене меню</p>
+                                <p>Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2 офіціанти-різнороби</p>
+                                <p>Посадкові місця: є</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="formats-item horseshoe">
+                        <article class="format">
+                            <h3 class="format-title">Horseshoe</h3>
+                            <div class="format-text">
+                                <p>Площа: до 120 м2</p>
+                                <p>Меню: розширене меню</p>
+                                <p>Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2 офіціанти-різнороби</p>
+                                <p>Посадкові місця: є</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="formats-item handlebar">
+                        <article class="format">
+                            <h3 class="format-title">Handlebar</h3>
+                            <div class="format-text">
+                                <p>Площа: до 120 м2</p>
+                                <p>Меню: розширене меню</p>
+                                <p>Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2 офіціанти-різнороби</p>
+                                <p>Посадкові місця: є</p>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="button-container">
+                <button class="carousel-button right-button" type="button">
+                    <img width="30" height="30" src="images/reshot-button.svg" alt="Reshot Button">
+                </button>
+            </div>
+        </div>
+    </section>
+
+        <section class="section" id="contactsSection">
+            <div class="container_con">
+                <div class="content-wrapper">
+                    <div class="text-form-container">
+                        <div class="text-content">
+                            <h2 class="contact-title section-title">Приєднуйтеся до  мережі  пекарень</h2>
+                            <p class="centered-text">Заповни форму, щоб ми звʼязались з тобою!</p>
+                        </div>
+        
+                        <form id="myForm">
+                            <label for="firstName">Ім'я:</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                    
+                            <label for="lastName">Прізвище:</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                    
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                    
+                            <input type="submit" value="Відправити">
+                        </form>
+                    </div>
+                    
+                        <script>
+                            document.getElementById("myForm").addEventListener("submit", function(event) {
+                                event.preventDefault();
+                                var firstName = document.getElementById("firstName").value;
+                                var lastName = document.getElementById("lastName").value;
+                                var email = document.getElementById("email").value;
+                                console.log("Ім'я: " + firstName);
+                                console.log("Прізвище: " + lastName);
+                                console.log("Email: " + email);
+                                alert("Форма успішно відправленна!");
+                            });
+                        </script>
+
+                        
+                    </div>
+
+                    <div class="map-container">
+                        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1640546631725!2d30.488653212461063!3d50.45666967147489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637bfe1717%3A0x5370c2254ad1b952!2sSichovykh%20Striltsiv%20St%2C%2054%2C%20Kyiv%2C%20Ukraine%2C%2002000!5e0!3m2!1sen!2sde!4v1702021971019!5m2!1sen!2sde"
+                            width="603" height="595" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="section" id="contactsSection">
-            <div class="container">
-                <h2 class="contact-title section-title">Приєднуйтеся до мережі пекарень</h2>
-            <p>Заповни форму, щоб ми звʼязались з тобою!</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1640546631725!2d30.488653212461063!3d50.45666967147489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637bfe1717%3A0x5370c2254ad1b952!2sSichovykh%20Striltsiv%20St%2C%2054%2C%20Kyiv%2C%20Ukraine%2C%2002000!5e0!3m2!1sen!2sde!4v1702021971019!5m2!1sen!2sde" 
-            width="603" height="595" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            </div>
-        </section>
+
+              
     </main>
     <footer class="footer">
         <div class="container">
@@ -181,6 +227,7 @@
             </nav>
             <address>
                 <ul>
+                    
                     <li><a class="address-link" href="tel:+3809600000007">+38 (096) 000 000 07</a></li>
                     <li><a class="address-link" href="mailto:shopbakery@gmail.com">shopbakery@gmail.com</a></li>
                     <li>
@@ -198,6 +245,5 @@
     </footer>
 </body>
 </html>
-
 
 

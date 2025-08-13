@@ -24,7 +24,7 @@
                         <li class="header-item"><a class="header-link" href="#contactsSection">Контакти</a></li>
                     </ul>
                 </nav>
-                <button class="button" type="button">Замовити дзвінок</button>
+                <button id="callBtn class="button" type="button">Замовити дзвінок</button>
             </div>
         </div>
     </header>
@@ -108,6 +108,28 @@
         </section>
     <section class="section" id="formatsSection">
   <div class="container">
+      
+<!-- Модальное окно контактов -->
+<div id="contactOverlay" class="overlay">
+  <div class="overlay-content">
+    <button class="close-btn" aria-label="Закрыть">&times;</button>
+    <h2 class="section-title centered">Приєднуйтеся до мережі пекарень</h2>
+    <p class="centered-text">Заповни форму, щоб ми звʼязались з тобою!</p>
+
+    <form id="overlayForm" class="contact-form">
+      <label for="overlayFirstName">Ім'я:</label>
+      <input type="text" id="overlayFirstName" name="firstName" required>
+
+      <label for="overlayLastName">Прізвище:</label>
+      <input type="text" id="overlayLastName" name="lastName" required>
+
+      <label for="overlayEmail">Email:</label>
+      <input type="email" id="overlayEmail" name="email" required>
+
+      <button type="submit" class="button">Відправити</button>
+    </form>
+  </div>
+</div>
 
   
 
@@ -198,6 +220,7 @@
 
 </body>
 </html>
+
 
 
 

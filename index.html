@@ -217,9 +217,42 @@
             
         </div>
     </footer>
+    <script>
+  // получаем элементы
+  const callBtn   = document.getElementById('callBtn');      // кнопка "Замовити дзвінок"
+  const overlay   = document.getElementById('contactOverlay'); // модальное окно
+  const closeBtn  = overlay.querySelector('.close-btn');      // крестик закрытия
+
+  // открыть модальное окно
+  callBtn.addEventListener('click', () => {
+    overlay.classList.add('active');
+  });
+
+  // закрыть модальное окно при клике на крестик
+  closeBtn.addEventListener('click', () => {
+    overlay.classList.remove('active');
+  });
+
+  // закрыть модальное окно при клике вне его содержимого
+  overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) {
+      overlay.classList.remove('active');
+    }
+  });
+
+  // пример обработки отправки формы (можно заменить на вашу логику)
+  document.getElementById('overlayForm').addEventListener('submit', (event) => {
+    event.preventDefault(); // отменяем стандартную отправку
+    // Здесь можно добавить AJAX‑отправку данных или другие действия
+    alert('Форма відправлена!');
+    overlay.classList.remove('active'); // закрываем модальное окно
+  });
+</script>
+
 
 </body>
 </html>
+
 
 
 

@@ -120,25 +120,6 @@ ul {
 
 /* carousel-button */
 
-.carousel-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 1px solid var(--color-primary-dark);
-    /* Ваши стили для кнопок карусели */
-}
-
-.carousel-button:hover {
-    background-color: #a9d753;
-    transition: 0.25s;
-}
 
 
 
@@ -357,6 +338,8 @@ text-align: center;
   .carousel-button{ width: 52px; height: 52px; }
   #formatsSection .container{ grid-template-columns: 48px 1fr 48px; }
 }
+
+
 
 
 .format:first-child {
@@ -671,4 +654,5 @@ border: 2px solid #cfcfbc;}*/
     margin-top: 10px; /* Add spacing between address links and copyright */
 }
    
+
 

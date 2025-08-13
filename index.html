@@ -24,7 +24,7 @@
                         <li class="header-item"><a class="header-link" href="#contactsSection">Контакти</a></li>
                     </ul>
                 </nav>
-                <button id="callBtn class="button" type="button">Замовити дзвінок</button>
+                <button class="button" type="button">Замовити дзвінок</button>
             </div>
         </div>
     </header>
@@ -109,27 +109,7 @@
     <section class="section" id="formatsSection">
   <div class="container">
       
-<!-- Модальное окно контактов -->
-<div id="contactOverlay" class="overlay">
-  <div class="overlay-content">
-    <button class="close-btn" aria-label="Закрыть">&times;</button>
-    <h2 class="section-title centered">Приєднуйтеся до мережі пекарень</h2>
-    <p class="centered-text">Заповни форму, щоб ми звʼязались з тобою!</p>
 
-    <form id="overlayForm" class="contact-form">
-      <label for="overlayFirstName">Ім'я:</label>
-      <input type="text" id="overlayFirstName" name="firstName" required>
-
-      <label for="overlayLastName">Прізвище:</label>
-      <input type="text" id="overlayLastName" name="lastName" required>
-
-      <label for="overlayEmail">Email:</label>
-      <input type="email" id="overlayEmail" name="email" required>
-
-      <button type="submit" class="button">Відправити</button>
-    </form>
-  </div>
-</div>
 
   
 
@@ -217,41 +197,11 @@
             
         </div>
     </footer>
-    <script>
-  // получаем элементы
-  const callBtn   = document.getElementById('callBtn');      // кнопка "Замовити дзвінок"
-  const overlay   = document.getElementById('contactOverlay'); // модальное окно
-  const closeBtn  = overlay.querySelector('.close-btn');      // крестик закрытия
-
-  // открыть модальное окно
-  callBtn.addEventListener('click', () => {
-    overlay.classList.add('active');
-  });
-
-  // закрыть модальное окно при клике на крестик
-  closeBtn.addEventListener('click', () => {
-    overlay.classList.remove('active');
-  });
-
-  // закрыть модальное окно при клике вне его содержимого
-  overlay.addEventListener('click', (event) => {
-    if (event.target === overlay) {
-      overlay.classList.remove('active');
-    }
-  });
-
-  // пример обработки отправки формы (можно заменить на вашу логику)
-  document.getElementById('overlayForm').addEventListener('submit', (event) => {
-    event.preventDefault(); // отменяем стандартную отправку
-    // Здесь можно добавить AJAX‑отправку данных или другие действия
-    alert('Форма відправлена!');
-    overlay.classList.remove('active'); // закрываем модальное окно
-  });
-</script>
 
 
 </body>
 </html>
+
 
 
 

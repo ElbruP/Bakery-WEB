@@ -244,8 +244,59 @@
             
         </div>
     </footer>
+    <script>
+(function(){
+  const track = document.querySelector('.formats-track');
+  if (!track) return;
+
+  const slides = Array.from(track.children);
+  const btnPrev = document.querySelector('.left-button');
+  const btnNext = document.querySelector('.right-button');
+
+  let index = 0;
+  const total = slides.length;
+
+  function goTo(i){
+    index = (i + total) % total; // цикл по кругу
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  btnPrev.addEventListener('click', () => goTo(index - 1));
+  btnNext.addEventListener('click', () => goTo(index + 1));
+
+  // Клавиши ← →
+  document.addEventListener('keydown', (e)=>{
+    if (e.key === 'ArrowLeft')  goTo(index - 1);
+    if (e.key === 'ArrowRight') goTo(index + 1);
+  });
+
+  // Свайп/drag
+  let startX = 0, deltaX = 0, isDown = false;
+
+  const start = (x)=>{ isDown = true; startX = x; deltaX = 0; };
+  const move  = (x)=>{ if(!isDown) return; deltaX = x - startX; };
+  const end   = ()=>{
+    if(!isDown) return;
+    isDown = false;
+    const threshold = Math.min(80, window.innerWidth * 0.12);
+    if (deltaX >  threshold) goTo(index - 1);
+    else if (deltaX < -threshold) goTo(index + 1);
+  };
+
+  track.addEventListener('pointerdown', e => { track.setPointerCapture(e.pointerId); start(e.clientX); });
+  track.addEventListener('pointermove',  e => move(e.clientX));
+  track.addEventListener('pointerup',    end);
+  track.addEventListener('pointercancel',end);
+  track.addEventListener('pointerleave', end);
+
+  // начальное положение
+  goTo(0);
+})();
+</script>
+
 </body>
 </html>
+
 
 
 

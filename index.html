@@ -110,15 +110,20 @@
     <section class="section" id="formatsSection">
   <div class="container">
 
-    <button class="carousel-button left-button" type="button" aria-label="Попередній формат">
-      <img width="24" height="24" src="images/reshot-icon-left.svg" alt="">
+    <!-- Кнопка влево -->
+    <button class="carousel-button left-button" type="button" aria-label="Назад">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M15 18L9 12L15 6" stroke="#31261a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     </button>
 
     <h2 class="formats-title section-title">Формати</h2>
 
-    <div class="formats-container" data-slider>
-      <ul class="formats-list formats-track">
-        <li class="formats-item walrus">
+    <!-- Слайдер -->
+    <div class="formats-container">
+      <ul class="formats-track">
+        <li class="formats-item">
+          <img src="images/walrus-format.jpg" alt="Walrus" class="format-img">
           <article class="format">
             <h3 class="format-title">Walrus</h3>
             <div class="format-text">
@@ -129,8 +134,8 @@
             </div>
           </article>
         </li>
-
-        <li class="formats-item horseshoe">
+        <li class="formats-item">
+          <img src="images/horseshoe-format.jpg" alt="Horseshoe" class="format-img">
           <article class="format">
             <h3 class="format-title">Horseshoe</h3>
             <div class="format-text">
@@ -141,8 +146,8 @@
             </div>
           </article>
         </li>
-
-        <li class="formats-item handlebar">
+        <li class="formats-item">
+          <img src="images/handlebar-format.jpg" alt="Handlebar" class="format-img">
           <article class="format">
             <h3 class="format-title">Handlebar</h3>
             <div class="format-text">
@@ -156,12 +161,16 @@
       </ul>
     </div>
 
-    <button class="carousel-button right-button" type="button" aria-label="Наступний формат">
-      <img width="24" height="24" src="images/reshot-button.svg" alt="">
+    <!-- Кнопка вправо -->
+    <button class="carousel-button right-button" type="button" aria-label="Вперёд">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M9 6L15 12L9 18" stroke="#31261a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     </button>
 
   </div>
 </section>
+
 
 
         <section class="section" id="contactsSection">
@@ -296,6 +305,7 @@
 
 </body>
 </html>
+
 
 
 

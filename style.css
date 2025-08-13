@@ -268,6 +268,95 @@ text-align: center;
     gap: 20px;
 
 }
+/* === Slider layout === */
+.formats-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.formats-track {
+  display: flex;
+  transition: transform 420ms ease;
+  will-change: transform;
+}
+
+.formats-item {
+  min-width: 100%;
+  position: relative;
+  display: grid;
+  place-items: end start; /* текст внизу слева */
+  padding: 0; /* под текст снизу добавим */
+}
+
+/* Пример фоновых картинок под карточки */
+.walrus   { background: url("images/walrus.jpg") center/cover no-repeat;   min-height: 480px; }
+.horseshoe{ background: url("images/horseshoe.jpg") center/cover no-repeat;min-height: 480px; }
+.handlebar{ background: url("images/handlebar.jpg") center/cover no-repeat;min-height: 480px; }
+
+/* затемнение под текст */
+.formats-item::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,.55) 85%);
+  pointer-events:none;
+}
+
+/* карточка с текстом */
+.format {
+  position: relative;
+  color: #fff;
+  padding: 24px 28px;
+  margin: 0 0 12px 12px;
+  z-index: 1;
+}
+.format-title {
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0 0 6px;
+}
+.format-text p { margin: 2px 0; }
+
+/* === Buttons (круглые, как на скрине) === */
+.carousel-button{
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  border: none;
+  background: #fff;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.carousel-button img{ display:block; width:24px; height:24px; }
+
+/* Позиционирование кнопок по краям секции */
+#formatsSection .container{
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px 1fr 56px; /* лево — контент — право */
+  align-items: center;
+  gap: 12px;
+}
+#formatsSection .formats-title{
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 8px 0 18px;
+}
+#formatsSection .left-button  { grid-column: 1; justify-self: start; }
+#formatsSection .right-button { grid-column: 3; justify-self: end; }
+#formatsSection .formats-container { grid-column: 2; }
+
+.carousel-button:hover{ box-shadow: 0 8px 22px rgba(0,0,0,.18); transform: translateY(-1px); }
+.carousel-button:active{ transform: translateY(0); }
+
+/* Адаптив */
+@media (max-width: 768px){
+  .format-title{ font-size: 22px; }
+  .carousel-button{ width: 52px; height: 52px; }
+  #formatsSection .container{ grid-template-columns: 48px 1fr 48px; }
+}
 
 
 .format:first-child {
@@ -582,3 +671,4 @@ border: 2px solid #cfcfbc;}*/
     margin-top: 10px; /* Add spacing between address links and copyright */
 }
    
+
